@@ -10,3 +10,8 @@ console.log(pi);
 console.log(sum(10, 20));
 console.log(message);
 
+// import 라이브러리이름 from "라이브러리이름";
+import lodashLibrary from "lodash";
+
+console.log(lodashLibrary);
+
