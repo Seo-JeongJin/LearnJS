@@ -1,0 +1,24 @@
+
+<!-- HTML -->
+<div id="app">
+    <p>{{count}}</p>
+    <!-- directive를 이용해서 버튼에 click 이벤트가 발생했을 때 addCount 메서드 실행 -->
+    <button v-on:click="addCount">+</button> 
+</div>
+
+<!-- JS -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        data() { // == data : funtion() {}
+            return {
+                count : 0
+            }
+        },
+        methods : {
+            addCount() {
+                this.count++
+            } 
+        }
+    }).mount('#app');
+</script>
