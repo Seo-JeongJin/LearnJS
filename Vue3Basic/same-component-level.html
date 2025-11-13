@@ -8,12 +8,12 @@
 <!-- JavaScript -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
-  var appHeader = {
+  let appHeader = {
     props: ['appTitle'],
     template: '<h1>{{ appTitle }}</h1>',
   }
 
-  var appContents = {
+  let appContents = {
     template: `
       <p>
         <button v-on:click="sendEvent">로그인</button>
