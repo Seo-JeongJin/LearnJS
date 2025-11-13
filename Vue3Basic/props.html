@@ -1,0 +1,26 @@
+
+<div id="app">
+    <!-- 컴포넌트 표시 -->
+    <!-- <app-header v-bind:프롭스이름="상위컴포넌트의 데이터 이름"></app-header> -->
+    <!-- 부모의 appTitle 데이터를 자식의 title로 넘김 -->
+    <app-header v-bind:title="appTitle"></app-header>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                appTitle : 'props 넘기기'
+            }
+        },
+        // 인스턴스 옵션 속성 - 옵션 API
+        components : {
+            // '컴포넌트 이름' : 컴포넌트 내용
+            'app-header' : {
+                template : '<h1>{{title}}</h1>',
+                props : ['title']
+            }
+        }
+    }).mount('#app')
+</script>
