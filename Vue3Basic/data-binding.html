@@ -1,14 +1,14 @@
 
 <!-- HTML -->
 <div id="app">
-  <!-- 1. v-if -->
+  <!-- 1. v-if -> false일 때 DOM에서 요소 삭제, true일 때 요소 생김 -->
   <p v-if="login">로그인 되었습니다</p>
   <p v-else>로그인 하세요</p>
-  <button v-on:click="loginUser">로그인</button>                                                                                                                                   
+  <button v-on:click="loginUser">로그인</button>
 
   <hr>
 
-  <!-- 2. v-show -->
+  <!-- 2. v-show -> DOM에는 요소가 항상 남아 있지만 false 일 때 display : none 으로 숨겨짐 -->
   <!-- 표현식의 결과가 true면 보이고 false면 안보임 -->
   <p v-show="login">로그인 되었습니다</p>
   <button v-on:click="loginUser">로그인</button>
