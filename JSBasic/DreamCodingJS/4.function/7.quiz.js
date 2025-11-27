@@ -16,6 +16,10 @@ function log(num) {
 function doubleAndLog(num) {
   console.log(num * 2);
 }
+
+iterate(3, log);
+iterate(3, doubleAndLog);
+
 iterate(3, (num) => console.log(num));
 iterate(3, (num) => console.log(num * 2));
 

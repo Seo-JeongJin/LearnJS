@@ -7,16 +7,16 @@ function display(num) {
   console.log(num);
 }
 const value = 4;
-display(value);
-console.log(value);
+display(value); // 5
+console.log(value); // 4
 
 function displayObj(obj) {
   obj.name = 'Bob'; // ❌❌❌❌❌❌ 외부로 부터 주어진 인자(오브젝트)를 내부에서 변경 ❌
   console.log(obj);
 }
 const ellie = { name: 'Ellie' };
-displayObj(ellie);
-console.log(ellie);
+displayObj(ellie); // { name: 'Bob' }
+console.log(ellie); // { name: 'Bob' }
 
 function changeName(obj) {
   return { ...obj, name: 'Bob' };
