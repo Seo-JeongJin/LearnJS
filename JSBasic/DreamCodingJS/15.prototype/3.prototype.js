@@ -11,14 +11,15 @@ function Dog(name, emoji) {
 }
 
 // 프로토타입 레벨의 함수
-Dog.prototype.printName = function () { // 인스턴스 레벨에 들어있는게 아니라 오브젝트 프로토타입에 함수가 만들어지게 됨
+Dog.prototype.printName = function () {
+  // 인스턴스 레벨에 들어있는게 아니라 오브젝트 프로토타입에 함수가 만들어지게 됨
   console.log(`${this.name} ${this.emoji}`);
 };
 const dog1 = new Dog('뭉치', '🐶');
 const dog2 = new Dog('코코', '🐩');
-console.log(dog1, dog2);
-dog1.printName();
-dog2.printName();
+console.log(dog1, dog2); // Dog { name: '뭉치', emoji: '🐶' } Dog { name: '코코', emoji: '🐩' }
+dog1.printName(); // 뭉치 🐶
+dog2.printName(); // 코코 🐩
 
 // 오버라이딩
 // 인스턴스 레벨에서(자식) 동일한 이름으로 함수를 재정의 하면 (오버라이딩 하면)
@@ -26,11 +27,11 @@ dog2.printName();
 dog1.printName = function () {
   console.log('안녕!!'); // 오버라이딩 돼서 덮어씌워짐
 };
-dog1.printName();
+dog1.printName(); // 안녕!!
 
 // 정적 레벨
 Dog.hello = () => {
   console.log('Hello!');
 };
-Dog.hello();
+Dog.hello(); // Hello!
 Dog.MAX_AGE = 20;

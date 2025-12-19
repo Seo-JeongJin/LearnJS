@@ -4,7 +4,8 @@ function runInDelay(callback, seconds) {
   if (!callback) {
     throw new Error('callback함수를 전달 해야 함');
   }
-  if (!seconds || seconds < 0) { // seconds가 없거나 seconds가 0보다 작다면
+  if (!seconds || seconds < 0) {
+    // seconds가 없거나 seconds가 0보다 작다면
     throw new Error('seconds는 0보다 커야 함');
   }
   setTimeout(callback, seconds * 1000);
@@ -13,4 +14,6 @@ try {
   runInDelay(() => {
     console.log('타이머 완료!');
   }, 2);
-} catch (error) {}
+} catch (error) {
+  console.error(error);
+}

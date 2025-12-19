@@ -1,4 +1,3 @@
-
 // 핵심 개념(내가 이해하고 정리한 것)
 // Promise 객체가 resolve 되면, resolve() 안의 인자가 다음 then()으로 반환된다 !
 // Promise 자체의 리턴 값은 Promise 객체
@@ -13,7 +12,8 @@
 // -> 여기서 value 는 resolve('🍌') 의 인자 그대로임
 
 function runInDelay(seconds) {
-  return new Promise((resolve, reject) => { // resolve : 성공했을 때 호출, reject : 실패했을 때 호출
+  return new Promise((resolve, reject) => {
+    // resolve : 성공했을 때 호출, reject : 실패했을 때 호출
     if (!seconds || seconds < 0) {
       reject(new Error('seconds가 0보다 작음'));
     }
@@ -21,7 +21,9 @@ function runInDelay(seconds) {
   });
 }
 
+// then()은 무조건 resolve 가 호출되어야 실행됨
+
 runInDelay(2)
-  .then(() => console.log('타이머 완료!')) // runInDelay가 성공적으로 완료되면 then 호출 -> 필요한 일 수행
+  .then(() => console.log('타이머 완료!')) // setTimeout이 실행되고 resolve()가 호출되면 then 호출
   .catch(console.error) // 실패한다면 catch -> 에러를 처리
   .finally(() => console.log('끝났다!')); // 성공하든 실패하든 호출

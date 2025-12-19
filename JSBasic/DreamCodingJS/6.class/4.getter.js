@@ -14,6 +14,8 @@ class Student {
 }
 
 const student = new Student('수지', '김');
+console.log(student);
+
 student.firstName = '안나';
 console.log(student.firstName);
 console.log(student.fullName);

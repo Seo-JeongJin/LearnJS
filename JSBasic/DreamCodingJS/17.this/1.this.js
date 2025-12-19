@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /**
  * 글로벌 컨텍스트에서의 this
  * - 브라우저
@@ -7,7 +7,7 @@
 
 const x = 0;
 module.exports.x = x;
-console.log(this);
+console.log(this); // { x: 0 }
 console.log(globalThis); // globalThis는 전역 객체를 가리킴
 // globalThis.setTimeout();
 // setTimeout(); // globalThis는 생략 가능
@@ -33,7 +33,7 @@ function Cat(name) {
     console.log(this.name); // 앞으로 만들어질 인스턴스의 name을 가리킴 -> cat.name
   };
 }
-const cat1 = new Cat("냐옹");
-const cat2 = new Cat("미야옹");
+const cat1 = new Cat('냐옹');
+const cat2 = new Cat('미야옹');
 cat1.printName();
 cat2.printName();

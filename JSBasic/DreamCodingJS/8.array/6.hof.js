@@ -13,25 +13,25 @@ const item2 = { name: '🍪', price: 3 };
 const item3 = { name: '🍙', price: 1 };
 const products = [item1, item2, item3, item2];
 let result = products.find((item) => item.name === '🍪');
-console.log(result);
+console.log(result); // { name: '🍪', price: 3 }
 
 // findIndex: 제일 먼저 조건에 맞는 아이템의 인덱스를 반환
 result = products.findIndex((item) => item.name === '🍪');
-console.log(result);
+console.log(result); // 1
 
 // 배열의 아이템들이 부분적으로 조건(콜백함수)에 맞는지 확인
 result = products.some((item) => item.name === '🍪');
-console.log(result);
+console.log(result); // true
 
 // 배열의 아이템들이 전부 조건(콜백함수)에 맞는지 확인
 result = products.every((item) => item.name === '🍪');
-console.log(result);
+console.log(result); // false
 
 // 조건에 맞는 모든 아이템들을 새로운 배열로!
 result = products.filter((item) => item.name === '🍪');
-console.log(result);
+console.log(result); // [ { name: '🍪', price: 3 }, { name: '🍪', price: 3 } ]
 
-console.clear();
+// console.clear();
 
 // Map 배열의 아이템들을 각각 다른 아이템으로 매핑할 수 있는, 변환해서 새로운 배열 생성!
 const nums = [1, 2, 3, 4, 5];

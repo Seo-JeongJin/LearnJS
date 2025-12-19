@@ -19,17 +19,17 @@ function Dog(name) {
   };
 }
 
-const cat = new Cat("냐옹");
-const dog = new Dog("멍멍");
-cat.printName();
-dog.printName();
+const cat = new Cat('냐옹');
+const dog = new Dog('멍멍');
+cat.printName(); // 고양이의 이름을 출력 : 냐옹
+dog.printName(); // 강아지의 이름을 출력 : 멍멍
 
 dog.printName = cat.printName;
 dog.printName(); // 고양이의 이름을 출력 : 멍멍 -> this.name이 호출한 사람(dog) 기준으로 할당됨
 cat.printName(); // 고양이의 이름을 출력 : 냐옹
 
 function printOnMonitor(printName) {
-  console.log("모니터를 준비하고, 전달된 콜백을 실행");
+  console.log('모니터를 준비하고, 전달된 콜백을 실행');
   printName(); // printName을 호출하는 객체 없음 -> undefined
 }
 

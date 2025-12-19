@@ -63,3 +63,5 @@ console.log(dog);
 dog.sleep();
 dog.eat();
 dog.play();
+
+console.log(new Animal('잉ㅁㄴㅇ'));

@@ -28,4 +28,3 @@ getChicken()
 //   })
 //   .then((egg) => fryEgg(egg))
 //   .then((friedEgg) => console.log(friedEgg));
-  
